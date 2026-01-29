@@ -1,2 +1,11 @@
+# .NET Core
 bin/
 obj/
+*.user
+*.suo
+*.sln.docstates
+*.csproj.user
+
+# VS Code
+.vscode/settings.json
+*.code-workspace
