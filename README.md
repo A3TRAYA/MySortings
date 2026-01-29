@@ -1,2 +1,2 @@
 # MySortings
-I tried to implement the sorting functions myself
+I tried to implement the known sorting functions myself
