@@ -16,7 +16,7 @@ namespace MySortings
                 inputArray[i] = ran.Next(0, 100);
             }
 
-            Console.WriteLine("Выберите тип сортировки: \n0 - Bubble");
+            Console.WriteLine("Выберите тип сортировки: \n0 - Bubble.");
 
             switch (Convert.ToInt32(Console.ReadLine()))
             {
