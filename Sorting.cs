@@ -29,9 +29,9 @@ namespace MySortings
 
             }
 
-            Console.Write($" Изначальный массив: {string.Join(", ", inputArray)}");
+            Console.Write($" Input array: {string.Join(", ", inputArray)}");
 
-            Console.WriteLine($"\n Конечный... массив: {string.Join(", ", sortedArray)}");
+            Console.WriteLine($"\n Sorted array: {string.Join(", ", sortedArray)}");
         }
     }
 }
