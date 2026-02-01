@@ -7,5 +7,6 @@ obj/
 *.csproj.user
 
 # VS Code
+vscode/
 .vscode/settings.json
 *.code-workspace

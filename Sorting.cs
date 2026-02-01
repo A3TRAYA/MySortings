@@ -2,36 +2,89 @@
 
 namespace MySortings
 {
+    enum SortType
+    {
+        Bubble,
+        Insertion,
+        Selection,
+        Heap,
+    }
+
     class Program
     {
         public static void Main(string[] args)
         {
-            int[] inputArray = new int[15];
+            int[] inputArray = CreateArray(15);
+            int[] sortedArray = CreateArray(15);
 
-            int[] sortedArray = new int[15];
+            ArrayValueRandomize(inputArray);
 
+            Console.WriteLine("Choose the sort type: \n0 - Bubble \n1 - Insertion" +
+                              "\n2 - Selection \n3 - Heap");
+
+            string? inputSelect = Console.ReadLine();
+            if (int.TryParse(inputSelect ?? "", out int value))
+            {
+                SortType convertedInputSelect = (SortType)value;
+                switch (convertedInputSelect)
+                {
+                    case SortType.Bubble:
+                        sortedArray = Bubble.Sort(inputArray);
+                        break;
+
+                    case SortType.Insertion:
+
+                        break;
+
+                    case SortType.Selection:
+
+                        break;
+
+                    case SortType.Heap:
+
+                        break;
+
+                    default:
+                        Console.WriteLine("Nothing.");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Incorrect input!");
+                Console.ReadKey();
+                return;
+            }
+
+            ShowArrayDiff(inputArr: inputArray, sortedArr: sortedArray);
+
+            Console.ReadKey();
+        }
+
+
+        static int[] CreateArray(int arr_size)
+        {
+            int[] array = new int[arr_size];
+            return array;
+        }
+
+        static void ArrayValueRandomize(int[] arr)
+        {
             Random ran = new();
-            for (int i = 0; i < inputArray.Length; i++)
+
+            foreach (var item in arr)
             {
-                inputArray[i] = ran.Next(0, 100);
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    arr[i] = ran.Next(0, 100);
+                }
             }
+        }
 
-            Console.WriteLine("Выберите тип сортировки: \n0 - Bubble.");
-
-            switch (Convert.ToInt32(Console.ReadLine()))
-            {
-                case 0:
-                    sortedArray = Bubble.Sort(inputArray.ToArray());
-                    break;
-
-                default:
-                    break;
-
-            }
-
-            Console.Write($" Input array: {string.Join(", ", inputArray)}");
-
-            Console.WriteLine($"\n Sorted array: {string.Join(", ", sortedArray)}");
+        static void ShowArrayDiff(int[] inputArr, int[] sortedArr)
+        {
+            Console.Write($" Input array: {string.Join(", ", inputArr)}");
+            Console.WriteLine($"\n Sorted array: {string.Join(", ", sortedArr)}");
         }
     }
 }

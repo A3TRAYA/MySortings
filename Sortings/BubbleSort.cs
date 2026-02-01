@@ -2,8 +2,16 @@ namespace MySortings
 {
     static public class Bubble
     {
-        public static int[] Sort(int[] array)
+        public static int[] Sort(int[] source)
         {
+            if (source == null || source.Length == 0)
+            {
+                return Array.Empty<int>();
+            }
+
+            int[] array = new int[source.Length];
+            Array.Copy(source, array, source.Length);
+
             bool isSorted = false;
 
             int lastElement = array.Length - 1;
