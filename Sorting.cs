@@ -29,7 +29,7 @@ namespace MySortings
                 switch (convertedInputSelect)
                 {
                     case SortType.Bubble:
-                        sortedArray = Bubble.Sort(inputArray.ToArray());
+                        sortedArray = Bubble.Sort(inputArray);
                         break;
 
                     case SortType.Insertion:
