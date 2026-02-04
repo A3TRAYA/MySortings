@@ -9,11 +9,10 @@ namespace MySortings
                 return Array.Empty<int>();
             }
 
-            int[] array = new int[source.Length];
+            var array = new int[source.Length];
             Array.Copy(source, array, source.Length);
 
             bool isSorted = false;
-
             int lastElement = array.Length - 1;
 
             while (isSorted == false)

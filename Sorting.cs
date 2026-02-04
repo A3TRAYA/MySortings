@@ -14,8 +14,8 @@ namespace MySortings
     {
         public static void Main(string[] args)
         {
-            int[] inputArray = CreateArray(15);
-            int[] sortedArray = CreateArray(15);
+            var inputArray = CreateArray(15);
+            var sortedArray = CreateArray(15);
 
             ArrayValueRandomize(inputArray);
 
@@ -23,6 +23,7 @@ namespace MySortings
                               "\n2 - Selection \n3 - Heap");
 
             string? inputSelect = Console.ReadLine();
+            
             if (int.TryParse(inputSelect ?? "", out int value))
             {
                 SortType convertedInputSelect = (SortType)value;
@@ -52,8 +53,6 @@ namespace MySortings
             else
             {
                 Console.WriteLine("Incorrect input!");
-                Console.ReadKey();
-                return;
             }
 
             ShowArrayDiff(inputArr: inputArray, sortedArr: sortedArray);
