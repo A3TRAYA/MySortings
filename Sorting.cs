@@ -23,7 +23,7 @@ namespace MySortings
                               "\n2 - Selection \n3 - Heap");
 
             string? inputSelect = Console.ReadLine();
-            
+
             if (int.TryParse(inputSelect ?? "", out int value))
             {
                 SortType convertedInputSelect = (SortType)value;
@@ -34,6 +34,7 @@ namespace MySortings
                         break;
 
                     case SortType.Insertion:
+                        sortedArray = Insertion.Sort(inputArray);
 
                         break;
 
