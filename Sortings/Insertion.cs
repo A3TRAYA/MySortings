@@ -4,7 +4,7 @@ namespace MySortings
     {
         public static int[] Sort(int[] source)
         {
-            
+
             return source;
         }
     }

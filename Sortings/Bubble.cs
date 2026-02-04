@@ -24,6 +24,7 @@ namespace MySortings
                     if (array[i] >= array[i + 1])
                     {
                         isClean = false;
+
                         Swap(ref array[i], ref array[i + 1]);
                     }
                 }
@@ -38,7 +39,6 @@ namespace MySortings
 
             return array;
         }
-
 
         private static void Swap(ref int x, ref int y)
         {
