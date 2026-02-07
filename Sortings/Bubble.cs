@@ -1,10 +1,10 @@
 namespace MySortings
 {
-    static public class Bubble
+    public static class Bubble
     {
         public static int[] Sort(int[] source)
         {
-            if (source == null || source.Length == 0)
+            if (!source.IsValid())
             {
                 return Array.Empty<int>();
             }
@@ -12,9 +12,9 @@ namespace MySortings
             var array = new int[source.Length];
             Array.Copy(source, array, source.Length);
 
-            bool isSorted = false;
+            
             int lastElement = array.Length - 1;
-
+            bool isSorted = false;
             while (isSorted == false)
             {
                 bool isClean = true;
@@ -25,7 +25,7 @@ namespace MySortings
                     {
                         isClean = false;
 
-                        Swap(ref array[i], ref array[i + 1]);
+                        MyExtensions.Swap(ref array[i], ref array[i + 1]);
                     }
                 }
 
@@ -38,11 +38,6 @@ namespace MySortings
             }
 
             return array;
-        }
-
-        private static void Swap(ref int x, ref int y)
-        {
-            (y, x) = (x, y);
         }
     }
 }

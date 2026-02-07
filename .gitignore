@@ -9,4 +9,5 @@ obj/
 # VS Code
 vscode/
 .vscode/settings.json
+.vscode/launch.json
 *.code-workspace

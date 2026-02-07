@@ -9,8 +9,8 @@ namespace MySortings
     enum SortType
     {
         Bubble,
-        Insertion,
         Selection,
+        Insertion,
         Heap,
     }
 
@@ -19,7 +19,7 @@ namespace MySortings
         public static void Main(string[] args)
         {
             var inputArray = ArrayCreate(15);
-            var sortedArray = ArrayCreate(15);
+            var sortedArray = ArrayCreate(inputArray.Length);
 
             ArrayValueRandomize(inputArray);
 

@@ -6,13 +6,14 @@ namespace MySortings
         new()
         {
             [SortType.Bubble] = Bubble.Sort,
+            [SortType.Selection] = Selection.Sort,
             [SortType.Insertion] = Insertion.Sort,
         };
 
         public static void MenuChoice(ref int[] inputArray, ref int[] sortedArray)
         {
-            Console.WriteLine("Choose the sort type: \n0 - Bubble \n1 - Insertion" +
-                  "\n2 - Selection \n3 - Heap");
+            Console.WriteLine("Choose the sort type: \n0 - Bubble \n1 - Selection" +
+                  "\n2 - Insertion \n3 - Heap");
 
             string? inputSelect = Console.ReadLine();
 
